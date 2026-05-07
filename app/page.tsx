@@ -2,41 +2,38 @@ export default function Home() {
   return (
     <main
       style={{
-       <main
-  style={{
-    minHeight: "100vh",
-    backgroundImage:
-      "linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1974&auto=format&fit=crop')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundAttachment: "fixed",
-    color: "#fff",
-    padding: "40px",
-    fontFamily: "Arial",
-  }}
->
+        minHeight: "100vh",
+        backgroundImage:
+          "linear-gradient(rgba(0,0,0,0.80), rgba(0,0,0,0.90)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1974&auto=format&fit=crop')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+        color: "#ffffff",
+        padding: "40px",
+        fontFamily: "Arial",
       }}
     >
+      {/* HERO */}
       <section
         style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
           textAlign: "center",
+          paddingTop: "80px",
+          paddingBottom: "100px",
         }}
       >
         <h1
           style={{
-            fontSize: "60px",
+            fontSize: "72px",
             color: "#00ff88",
-            marginBottom: "10px",
+            marginBottom: "20px",
           }}
         >
-          SUPPORT ENERGIA AUTOMAÇÃO & REFRIGERAÇÃO
+          SUPPORT ENERGIA
         </h1>
 
         <h2
           style={{
-            fontSize: "28px",
+            fontSize: "36px",
             marginBottom: "30px",
             color: "#cccccc",
           }}
@@ -48,207 +45,181 @@ export default function Home() {
           style={{
             maxWidth: "900px",
             margin: "0 auto",
-            lineHeight: "35px",
             fontSize: "22px",
-            color: "#dddddd",
+            lineHeight: "40px",
           }}
         >
           Especialistas em manutenção de grupos geradores,
           automação industrial, refrigeração industrial e
-          soluções em energia para sistemas isolados
-          da região Amazônica.
+          soluções em energia para sistemas isolados da
+          região Amazônica.
         </p>
 
         <div
           style={{
-            marginTop: "40px",
+            marginTop: "50px",
             display: "flex",
-            justifyContent: "center",
             gap: "20px",
+            justifyContent: "center",
             flexWrap: "wrap",
           }}
         >
           <a
             href="https://wa.me/5592984794889"
             target="_blank"
-            style={{
-              backgroundColor: "#00ff88",
-              color: "#000",
-              padding: "18px 35px",
-              borderRadius: "12px",
-              textDecoration: "none",
-              fontWeight: "bold",
-              fontSize: "18px",
-            }}
+            style={buttonPrimary}
           >
             Falar no WhatsApp
           </a>
 
           <a
             href="#orcamento"
-            style={{
-              backgroundColor: "#111827",
-              color: "#00ff88",
-              padding: "18px 35px",
-              borderRadius: "12px",
-              textDecoration: "none",
-              fontWeight: "bold",
-              border: "1px solid #00ff88",
-              fontSize: "18px",
-            }}
+            style={buttonSecondary}
           >
             Solicitar Orçamento
           </a>
         </div>
       </section>
 
+      {/* SOBRE */}
       <section
         style={{
-          marginTop: "100px",
           maxWidth: "1200px",
-          marginInline: "auto",
+          margin: "0 auto",
+          marginBottom: "120px",
         }}
       >
         <h2
-          style={{
-            fontSize: "42px",
-            marginBottom: "40px",
-            color: "#00ff88",
-            textAlign: "center",
-          }}
+          style={titleStyle}
         >
           Sobre a Empresa
         </h2>
 
-        <div
-          style={{
-            backgroundColor: "#111827",
-            padding: "40px",
-            borderRadius: "20px",
-            lineHeight: "35px",
-            fontSize: "20px",
-            color: "#dddddd",
-          }}
-        >
-          A Custom Power Geradores nasceu com o objetivo de fornecer
-          soluções completas em geração de energia, automação
-          industrial e refrigeração industrial para empresas,
-          indústrias e sistemas isolados da região Norte.
+        <div style={cardStyle}>
+          <p style={textStyle}>
+            A Support Energia nasceu com o objetivo de fornecer
+            soluções completas em geração de energia, automação
+            industrial e refrigeração industrial para empresas,
+            indústrias e sistemas isolados da região Norte.
+          </p>
 
-          <br />
-          <br />
+          <p style={textStyle}>
+            Atuamos com manutenção preventiva, corretiva,
+            instalação, comissionamento e suporte técnico
+            especializado em grupos geradores diesel,
+            painéis elétricos, sistemas ATS, automação e
+            refrigeração industrial.
+          </p>
 
-          Com ampla experiência prática na região Amazônica,
-          atuamos com foco em confiabilidade, atendimento rápido
-          e mão de obra altamente qualificada.
-
-          <br />
-          <br />
-
-          Nossa missão é garantir energia contínua, eficiência operacional
-          e segurança para nossos clientes.
+          <p style={textStyle}>
+            Nossa equipe possui ampla experiência em operações
+            nos sistemas isolados do Amazonas, atendendo
+            clientes em Manaus, interior do Amazonas e região Norte.
+          </p>
         </div>
       </section>
 
+      {/* SERVIÇOS */}
       <section
         style={{
-          marginTop: "100px",
           maxWidth: "1200px",
-          marginInline: "auto",
+          margin: "0 auto",
+          marginBottom: "120px",
         }}
       >
-        <h2
-          style={{
-            fontSize: "42px",
-            marginBottom: "50px",
-            color: "#00ff88",
-            textAlign: "center",
-          }}
-        >
+        <h2 style={titleStyle}>
           Serviços Prestados
         </h2>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: "25px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "30px",
           }}
         >
-          {[
-            "Manutenção de Grupos Geradores",
-            "Automação Industrial",
-            "Refrigeração Industrial",
-            "Instalação de GMG",
-            "Sincronismo de Geradores",
-            "Retrofit de Painéis",
-            "Laudos Técnicos",
-            "Manutenção Preventiva",
-            "Manutenção Corretiva",
-            "Comissionamento",
-            "Assistência Técnica 24h",
-            "Contratos de Manutenção",
-          ].map((servico) => (
-            <div
-              key={servico}
-              style={{
-                backgroundColor: "#111827",
-                padding: "30px",
-                borderRadius: "18px",
-                border: "1px solid #1f2937",
-              }}
-            >
-              <h3
-                style={{
-                  color: "#00ff88",
-                  marginBottom: "15px",
-                  fontSize: "24px",
-                }}
-              >
-                {servico}
-              </h3>
+          <div style={serviceCard}>
+            <h3 style={serviceTitle}>Grupos Geradores</h3>
 
-              <p
-                style={{
-                  color: "#cccccc",
-                  lineHeight: "28px",
-                  fontSize: "17px",
-                }}
-              >
-                Serviço especializado executado com qualidade,
-                segurança e foco em máxima disponibilidade operacional.
-              </p>
-            </div>
-          ))}
+            <ul style={listStyle}>
+              <li>Manutenção preventiva</li>
+              <li>Manutenção corretiva</li>
+              <li>Instalação de geradores</li>
+              <li>Troca de componentes</li>
+              <li>ATS e sincronismo</li>
+              <li>Diagnóstico eletrônico</li>
+            </ul>
+          </div>
+
+          <div style={serviceCard}>
+            <h3 style={serviceTitle}>Automação Industrial</h3>
+
+            <ul style={listStyle}>
+              <li>CLP</li>
+              <li>IHMs</li>
+              <li>Painéis elétricos</li>
+              <li>Programação</li>
+              <li>Supervisórios</li>
+              <li>Controle automático</li>
+            </ul>
+          </div>
+
+          <div style={serviceCard}>
+            <h3 style={serviceTitle}>Refrigeração</h3>
+
+            <ul style={listStyle}>
+              <li>Refrigeração industrial</li>
+              <li>Câmaras frias</li>
+              <li>Chillers</li>
+              <li>Ar condicionado industrial</li>
+              <li>Manutenção técnica</li>
+              <li>Diagnóstico de falhas</li>
+            </ul>
+          </div>
         </div>
       </section>
 
+      {/* ÁREA DO CLIENTE */}
+      <section
+        style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          marginBottom: "120px",
+        }}
+      >
+        <h2 style={titleStyle}>
+          Área do Cliente
+        </h2>
+
+        <div style={cardStyle}>
+          <p style={textStyle}>
+            Em breve nossa área do cliente contará com:
+          </p>
+
+          <ul style={listStyle}>
+            <li>Acompanhamento de manutenção</li>
+            <li>Histórico de chamados</li>
+            <li>Relatórios técnicos</li>
+            <li>Solicitação de atendimento</li>
+            <li>Controle de contratos</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* ORÇAMENTO */}
       <section
         id="orcamento"
         style={{
-          marginTop: "100px",
           maxWidth: "900px",
-          marginInline: "auto",
+          margin: "0 auto",
+          marginBottom: "120px",
         }}
       >
-        <h2
-          style={{
-            fontSize: "42px",
-            marginBottom: "40px",
-            color: "#00ff88",
-            textAlign: "center",
-          }}
-        >
+        <h2 style={titleStyle}>
           Solicite um Orçamento
         </h2>
 
-        <div
-          style={{
-            backgroundColor: "#111827",
-            padding: "40px",
-            borderRadius: "20px",
-          }}
-        >
+        <div style={cardStyle}>
           <form
             style={{
               display: "flex",
@@ -264,18 +235,18 @@ export default function Home() {
 
             <input
               type="text"
-              placeholder="Empresa"
-              style={inputStyle}
-            />
-
-            <input
-              type="text"
               placeholder="Telefone"
               style={inputStyle}
             />
 
+            <input
+              type="email"
+              placeholder="E-mail"
+              style={inputStyle}
+            />
+
             <textarea
-              placeholder="Descreva sua necessidade"
+              placeholder="Descreva o serviço desejado"
               rows={6}
               style={inputStyle}
             />
@@ -284,14 +255,8 @@ export default function Home() {
               href="https://wa.me/5592984794889"
               target="_blank"
               style={{
-                backgroundColor: "#00ff88",
-                color: "#000",
-                padding: "18px",
-                borderRadius: "12px",
-                textDecoration: "none",
+                ...buttonPrimary,
                 textAlign: "center",
-                fontWeight: "bold",
-                fontSize: "18px",
               }}
             >
               Enviar Solicitação
@@ -300,86 +265,90 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        style={{
-          marginTop: "100px",
-          maxWidth: "1200px",
-          marginInline: "auto",
-        }}
-      >
-        <h2
-          style={{
-            fontSize: "42px",
-            marginBottom: "40px",
-            color: "#00ff88",
-            textAlign: "center",
-          }}
-        >
-          Área do Cliente
-        </h2>
-
-        <div
-          style={{
-            backgroundColor: "#111827",
-            padding: "40px",
-            borderRadius: "20px",
-            textAlign: "center",
-          }}
-        >
-          <p
-            style={{
-              color: "#cccccc",
-              fontSize: "20px",
-              lineHeight: "35px",
-            }}
-          >
-            Em breve nossos clientes poderão acessar relatórios técnicos,
-            históricos de manutenção, contratos, chamados e documentação
-            diretamente pela área exclusiva do cliente.
-          </p>
-
-          <div style={{ marginTop: "30px" }}>
-            <a
-              href="https://wa.me/5592984794889"
-              target="_blank"
-              style={{
-                backgroundColor: "#00ff88",
-                color: "#000",
-                padding: "18px 35px",
-                borderRadius: "12px",
-                textDecoration: "none",
-                fontWeight: "bold",
-              }}
-            >
-              Suporte Técnico
-            </a>
-          </div>
-        </div>
-      </section>
-
+      {/* RODAPÉ */}
       <footer
         style={{
-          marginTop: "120px",
           textAlign: "center",
-          color: "#888",
           paddingBottom: "40px",
+          color: "#888",
         }}
       >
-        <h3 style={{ color: "#00ff88" }}>
-          CUSTOM POWER GERADORES
-        </h3>
-
-        <p>Manaus - Amazonas</p>
-
-        <p>(92) 98479-4889</p>
+        <p>
+          SUPPORT ENERGIA AUTOMAÇÃO & REFRIGERAÇÃO
+        </p>
 
         <p>
-          Atendimento especializado em sistemas isolados
+          Manaus - Amazonas
+        </p>
+
+        <p>
+          WhatsApp: (92) 98479-4889
         </p>
       </footer>
     </main>
   );
 }
+
+const titleStyle = {
+  fontSize: "48px",
+  color: "#00ff88",
+  marginBottom: "40px",
+  textAlign: "center" as const,
+};
+
+const cardStyle = {
+  backgroundColor: "rgba(17,17,39,0.90)",
+  padding: "40px",
+  borderRadius: "20px",
+  border: "1px solid #00ff88",
+};
+
+const textStyle = {
+  fontSize: "20px",
+  lineHeight: "36px",
+  color: "#cccccc",
+  marginBottom: "20px",
+};
+
+const serviceCard = {
+  backgroundColor: "rgba(17,17,39,0.90)",
+  padding: "30px",
+  borderRadius: "20px",
+  border: "1px solid #00ff88",
+};
+
+const serviceTitle = {
+  color: "#00ff88",
+  fontSize: "28px",
+  marginBottom: "20px",
+};
+
+const listStyle = {
+  color: "#cccccc",
+  lineHeight: "36px",
+  fontSize: "18px",
+};
+
+const buttonPrimary = {
+  backgroundColor: "#00ff88",
+  color: "#000",
+  padding: "18px 35px",
+  borderRadius: "12px",
+  textDecoration: "none",
+  fontWeight: "bold",
+  fontSize: "18px",
+};
+
+const buttonSecondary = {
+  backgroundColor: "transparent",
+  color: "#00ff88",
+  padding: "18px 35px",
+  borderRadius: "12px",
+  textDecoration: "none",
+  fontWeight: "bold",
+  border: "1px solid #00ff88",
+  fontSize: "18px",
+};
 
 const inputStyle = {
   backgroundColor: "#0b0f14",
