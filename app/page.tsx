@@ -23,7 +23,7 @@ export default function Home() {
             marginBottom: "10px",
           }}
         >
-          CUSTOM POWER GERADORES
+          SUPPORT ENERGIA AUTOMAÇÃO & REFRIGERAÇÃO
         </h1>
 
         <h2
