@@ -2,11 +2,19 @@ export default function Home() {
   return (
     <main
       style={{
-        backgroundColor: "#0b0f14",
-        color: "#ffffff",
-        minHeight: "100vh",
-        fontFamily: "Arial, sans-serif",
-        padding: "40px 20px",
+       <main
+  style={{
+    minHeight: "100vh",
+    backgroundImage:
+      "linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1974&auto=format&fit=crop')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundAttachment: "fixed",
+    color: "#fff",
+    padding: "40px",
+    fontFamily: "Arial",
+  }}
+>
       }}
     >
       <section
