@@ -1,49 +1,45 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <main
       style={{
-        backgroundColor: "#050b14",
-        color: "#fff",
         minHeight: "100vh",
+        backgroundColor: "#050816",
+        color: "#fff",
+        fontFamily: "Arial",
       }}
     >
       {/* MENU */}
       <header
         style={{
-          position: "fixed",
-          top: 0,
-          width: "100%",
-          backgroundColor: "rgba(0,0,0,0.85)",
-          backdropFilter: "blur(10px)",
+          backgroundColor: "#000",
+          padding: "20px 60px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "20px 50px",
-          zIndex: 999,
-          borderBottom: "1px solid #00aaff",
+          borderBottom: "2px solid #00f7ff",
+          position: "fixed",
+          width: "100%",
+          top: 0,
+          zIndex: 1000,
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "15px",
-          }}
-        >
-          <Image
+        <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+          <img
             src="/logo.png"
             alt="Support"
-            width={70}
-            height={70}
+            style={{
+              width: "90px",
+              height: "90px",
+              objectFit: "contain",
+            }}
           />
 
           <h1
             style={{
-              fontSize: "32px",
-              color: "#ffaa00",
+              color: "#ffb300",
+              fontSize: "42px",
               fontWeight: "bold",
+              fontFamily: "Rye",
             }}
           >
             SUPPORT
@@ -53,50 +49,79 @@ export default function Home() {
         <nav
           style={{
             display: "flex",
-            gap: "25px",
-            fontSize: "18px",
+            gap: "35px",
+            fontSize: "22px",
+            fontWeight: "bold",
           }}
         >
-          <a href="/" style={menuStyle}>Home</a>
-          <a href="/empresa" style={menuStyle}>Empresa</a>
-          <a href="/servicos" style={menuStyle}>Serviços</a>
-          <a href="/planos" style={menuStyle}>Planos</a>
-          <a href="/orcamentos" style={menuStyle}>Orçamento</a>
-          <a href="/cliente" style={menuStyle}>Área do Cliente</a>
-          <a href="/contato" style={menuStyle}>Contato</a>
+          <a href="/" style={linkStyle}>
+            Home
+          </a>
+
+          <a href="/empresa" style={linkStyle}>
+            Empresa
+          </a>
+
+          <a href="/servicos" style={linkStyle}>
+            Serviços
+          </a>
+
+          <a href="/planos" style={linkStyle}>
+            Planos
+          </a>
+
+          <a href="/orcamentos" style={linkStyle}>
+            Orçamento
+          </a>
+
+          <a href="/cliente" style={linkStyle}>
+            Área do Cliente
+          </a>
+
+          <a href="/contato" style={linkStyle}>
+            Contato
+          </a>
+
+          <a href="/trabalhe-conosco" style={linkStyle}>
+            Trabalhe Conosco
+          </a>
         </nav>
       </header>
 
-      {/* HERO */}
+      {/* HOME */}
       <section
         style={{
-          height: "100vh",
+          minHeight: "100vh",
           backgroundImage:
-            "linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1974')",
+            "linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1974&auto=format&fit=crop')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "flex",
-          justifyContent: "center",
           alignItems: "center",
+          justifyContent: "center",
           textAlign: "center",
-          padding: "40px",
+          padding: "120px 40px",
         }}
       >
         <div>
-          <Image
+          <img
             src="/logo.png"
             alt="Support"
-            width={320}
-            height={320}
+            style={{
+              width: "320px",
+              margin: "0 auto",
+              display: "block",
+            }}
           />
 
           <h1
             style={{
-              fontSize: "90px",
-              color: "#ffaa00",
+              fontSize: "110px",
+              color: "#ffb300",
+              fontWeight: "bold",
               marginTop: "20px",
-              marginBottom: "10px",
-              textShadow: "0 0 20px #ffaa00",
+              textShadow: "0 0 30px #ffb300",
+              fontFamily: "Rye",
             }}
           >
             SUPPORT
@@ -104,9 +129,9 @@ export default function Home() {
 
           <h2
             style={{
-              fontSize: "38px",
-              color: "#00aaff",
-              marginBottom: "30px",
+              fontSize: "55px",
+              color: "#00f7ff",
+              marginTop: "20px",
             }}
           >
             Energia • Automação • Refrigeração
@@ -114,116 +139,148 @@ export default function Home() {
 
           <p
             style={{
-              maxWidth: "1000px",
-              margin: "0 auto",
-              fontSize: "24px",
-              lineHeight: "42px",
+              maxWidth: "1100px",
+              margin: "40px auto",
+              fontSize: "30px",
+              lineHeight: "50px",
               color: "#ddd",
             }}
           >
-            Especialistas em grupos geradores, sistemas híbridos,
-            energia solar, BESS, automação industrial e refrigeração
-            industrial na região Norte.
+            Especialistas em grupos geradores, sistemas híbridos, energia
+            solar, BESS, automação industrial e refrigeração industrial na
+            região Norte.
           </p>
 
           <div
             style={{
-              marginTop: "40px",
               display: "flex",
               justifyContent: "center",
-              gap: "20px",
+              gap: "30px",
+              marginTop: "50px",
               flexWrap: "wrap",
             }}
           >
             <a
               href="https://wa.me/5592984794889?text=Gostaria%20de%20conhecer%20as%20soluções%20Support."
-              target="_blank"
               style={buttonPrimary}
             >
               WhatsApp
             </a>
 
-            <a
-              href="/orcamentos"
-              style={buttonSecondary}
-            >
+            <a href="/orcamentos" style={buttonSecondary}>
               Solicitar Orçamento
             </a>
           </div>
         </div>
       </section>
 
+      {/* SOBRE */}
+      <section
+        style={{
+          padding: "120px 60px",
+          backgroundColor: "#08131f",
+          textAlign: "center",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "70px",
+            color: "#00f7ff",
+            marginBottom: "50px",
+            fontFamily: "Rye",
+          }}
+        >
+          Sobre a Empresa
+        </h2>
+
+        <p
+          style={{
+            maxWidth: "1200px",
+            margin: "0 auto",
+            fontSize: "28px",
+            lineHeight: "50px",
+            color: "#ccc",
+          }}
+        >
+          A SUPPORT Energia Automação e Refrigeração foi fundada em 2024 devido
+          à crescente demanda do mercado por empresas altamente qualificadas em
+          manutenção de grupos geradores, sistemas híbridos, energia solar,
+          automação industrial e refrigeração.
+          <br />
+          <br />
+          Seus fundadores possuem mais de 13 anos de experiência atuando nos
+          sistemas isolados da região Norte do país, com ampla experiência em
+          motores Scania, Caterpillar, Perkins e Volvo.
+        </p>
+      </section>
+
       {/* SERVIÇOS */}
       <section
         style={{
-          padding: "100px 50px",
+          padding: "120px 60px",
+          backgroundImage:
+            "linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1497436072909-f5e4be8c8e1f?q=80&w=1974&auto=format&fit=crop')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         <h2
           style={{
             textAlign: "center",
-            fontSize: "60px",
-            color: "#ffaa00",
-            marginBottom: "70px",
+            fontSize: "70px",
+            color: "#00f7ff",
+            marginBottom: "60px",
+            fontFamily: "Rye",
           }}
         >
-          Nossos Serviços
+          Serviços Prestados
         </h2>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
             gap: "30px",
           }}
         >
-          <div style={cardStyle}>
-            ⚡ Manutenção em Grupos Geradores
-          </div>
-
-          <div style={cardStyle}>
-            ☀️ Sistemas Fotovoltaicos
-          </div>
-
-          <div style={cardStyle}>
-            🔋 Sistemas BESS
-          </div>
-
-          <div style={cardStyle}>
-            ❄️ Refrigeração Industrial
-          </div>
-
-          <div style={cardStyle}>
-            🏭 Automação Industrial
-          </div>
-
-          <div style={cardStyle}>
-            📋 Contratos de Manutenção
-          </div>
+          {[
+            "Manutenção em grupos geradores",
+            "Instalação de sistemas solares",
+            "Sistemas híbridos com BESS",
+            "Automação industrial",
+            "Refrigeração industrial",
+            "Monitoramento remoto",
+          ].map((item) => (
+            <div key={item} style={cardStyle}>
+              <h3>{item}</h3>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* RODAPÉ */}
       <footer
         style={{
-          backgroundColor: "#02060c",
-          padding: "70px 40px",
+          backgroundColor: "#000",
+          padding: "60px",
           textAlign: "center",
-          borderTop: "1px solid #00aaff",
+          borderTop: "2px solid #00f7ff",
         }}
       >
-        <Image
+        <img
           src="/logo.png"
           alt="Support"
-          width={140}
-          height={140}
+          style={{
+            width: "150px",
+            marginBottom: "20px",
+          }}
         />
 
         <h2
           style={{
-            color: "#ffaa00",
-            marginTop: "20px",
-            fontSize: "42px",
+            color: "#ffb300",
+            fontSize: "45px",
+            fontFamily: "Rye",
           }}
         >
           SUPPORT
@@ -231,19 +288,18 @@ export default function Home() {
 
         <p
           style={{
-            color: "#aaa",
             marginTop: "20px",
-            fontSize: "20px",
+            color: "#ccc",
+            fontSize: "22px",
+            lineHeight: "40px",
           }}
         >
+          SUPPORT Energia Automação e Refrigeração
+          <br />
           Manaus - Amazonas
-        </p>
-
-        <p style={{ color: "#aaa" }}>
+          <br />
           WhatsApp: (92) 98479-4889
-        </p>
-
-        <p style={{ color: "#aaa" }}>
+          <br />
           suportenergiarefrigeracao@gmail.com
         </p>
       </footer>
@@ -251,38 +307,37 @@ export default function Home() {
   );
 }
 
-const menuStyle = {
+const linkStyle = {
   color: "#fff",
   textDecoration: "none",
-  fontWeight: "bold",
 };
 
 const buttonPrimary = {
-  backgroundColor: "#ffaa00",
+  backgroundColor: "#ffb300",
   color: "#000",
-  padding: "20px 35px",
+  padding: "22px 45px",
   borderRadius: "12px",
   textDecoration: "none",
   fontWeight: "bold",
-  fontSize: "20px",
+  fontSize: "22px",
 };
 
 const buttonSecondary = {
-  border: "2px solid #00aaff",
-  color: "#00aaff",
-  padding: "20px 35px",
+  backgroundColor: "transparent",
+  color: "#00f7ff",
+  padding: "22px 45px",
   borderRadius: "12px",
   textDecoration: "none",
+  border: "2px solid #00f7ff",
   fontWeight: "bold",
-  fontSize: "20px",
+  fontSize: "22px",
 };
 
 const cardStyle = {
-  backgroundColor: "#0b1625",
+  backgroundColor: "rgba(0,0,0,0.7)",
   padding: "40px",
   borderRadius: "20px",
-  border: "1px solid #00aaff",
+  border: "1px solid #00f7ff",
   fontSize: "24px",
-  fontWeight: "bold",
   textAlign: "center" as const,
 };
