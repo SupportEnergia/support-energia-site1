@@ -1,196 +1,235 @@
 export default function Servicos() {
   const sectionStyle = {
     backgroundColor: "#050505",
-    padding: "80px 40px",
     color: "#fff",
-    borderBottom: "2px solid #00e5ff",
+    padding: "80px 40px",
+    fontFamily: "Arial",
   };
 
   const titleStyle = {
-    fontSize: "60px",
+    fontSize: "65px",
     color: "#ffcc00",
     textAlign: "center" as const,
-    marginBottom: "40px",
+    marginBottom: "30px",
     textShadow: "0 0 25px #ff9900",
     fontWeight: "bold" as const,
   };
 
+  const cardStyle = {
+    backgroundColor: "#101010",
+    border: "2px solid #00e5ff",
+    borderRadius: "20px",
+    padding: "30px",
+    marginBottom: "50px",
+    boxShadow: "0 0 25px rgba(0,229,255,0.5)",
+  };
+
   const subtitleStyle = {
-    fontSize: "38px",
+    fontSize: "40px",
     color: "#00e5ff",
-    marginTop: "40px",
-    marginBottom: "25px",
-    textShadow: "0 0 10px #00e5ff",
+    marginBottom: "20px",
+    textShadow: "0 0 15px #00e5ff",
   };
 
   const textStyle = {
     fontSize: "22px",
-    lineHeight: "42px",
-    color: "#f1f1f1",
+    lineHeight: "2",
   };
 
   const imageStyle = {
     width: "100%",
+    maxWidth: "900px",
     borderRadius: "20px",
-    border: "3px solid #ffcc00",
     marginTop: "30px",
-    marginBottom: "40px",
-    boxShadow: "0 0 30px rgba(255,204,0,0.5)",
+    marginBottom: "30px",
+    border: "3px solid #ffcc00",
+    boxShadow: "0 0 25px rgba(255,204,0,0.7)",
   };
 
   return (
-    <main
-      style={{
-        backgroundColor: "#000",
-        minHeight: "100vh",
-        fontFamily: "Arial",
-      }}
-    >
-      {/* HERO */}
-      <section
-        style={{
-          backgroundColor: "#000",
-          textAlign: "center",
-          padding: "120px 40px",
-          borderBottom: "2px solid #00e5ff",
-        }}
-      >
-        <img
-          src="/images/gerador2.jpg"
-          alt="SUPPORT"
-          style={{
-            width: "450px",
-            maxWidth: "100%",
-            marginBottom: "40px",
-            borderRadius: "20px",
-            boxShadow: "0 0 30px rgba(255,204,0,0.5)",
-          }}
-        />
+    <main style={sectionStyle}>
+      <h1 style={titleStyle}>SERVIÇOS SUPPORT</h1>
 
-        <h1
-          style={{
-            fontSize: "80px",
-            color: "#ffcc00",
-            textShadow: "0 0 25px #ff9900",
-            marginBottom: "20px",
-          }}
-        >
-          SERVIÇOS SUPPORT
-        </h1>
+      {/* ================= GERADORES ================= */}
 
-        <p
-          style={{
-            fontSize: "30px",
-            color: "#00e5ff",
-            fontWeight: "bold",
-          }}
-        >
-          Energia • Automação • Refrigeração
-        </p>
-      </section>
-
-      {/* GERADORES */}
-      <section style={sectionStyle}>
-        <h2 style={titleStyle}>Grupos Geradores</h2>
+      <section style={cardStyle}>
+        <h2 style={subtitleStyle}>
+          Serviços em Grupos Geradores
+        </h2>
 
         <img
-          src="/images/gerador1.jpg"
+          src="/images/gerador2.png"
           alt="Grupo Gerador"
           style={imageStyle}
         />
 
         <div style={textStyle}>
-          <p>• Instalação de grupos geradores diesel e gás.</p>
-          <p>• Montagem de bases e estruturas metálicas.</p>
-          <p>• Instalação de tanques de combustível.</p>
-          <p>• Interligação elétrica de potência e comando.</p>
-          <p>• Instalação de QTA/ATS.</p>
-          <p>• Sistemas de aterramento e proteção elétrica.</p>
-          <p>• Sistemas de exaustão e silenciamento.</p>
-          <p>• Parametrização de controladores eletrônicos.</p>
-          <p>• Start-up e comissionamento.</p>
-          <p>• Testes operacionais com carga e sem carga.</p>
-        </div>
+          <h3>Instalação de Grupos Geradores</h3>
 
-        <h3 style={subtitleStyle}>Manutenção Preventiva</h3>
+          <ul>
+            <li>Instalação de grupos geradores diesel e gás.</li>
+            <li>Montagem de bases, suportes e estruturas metálicas.</li>
+            <li>Instalação de tanques de combustível.</li>
+            <li>Interligação elétrica de potência e comando.</li>
+            <li>Instalação de QTA / ATS.</li>
+            <li>Parametrização de controladores eletrônicos.</li>
+            <li>Start-up e comissionamento completo.</li>
+            <li>Testes operacionais com carga e sem carga.</li>
+          </ul>
 
-        <div style={textStyle}>
-          <p>• Troca de óleo lubrificante e filtros.</p>
-          <p>• Troca de filtros de combustível e ar.</p>
-          <p>• Verificação do sistema de arrefecimento.</p>
-          <p>• Limpeza de radiadores.</p>
-          <p>• Teste de baterias e carregadores.</p>
-          <p>• Inspeção elétrica geral.</p>
-          <p>• Ajustes de tensão e frequência.</p>
-          <p>• Emissão de relatórios técnicos.</p>
+          <h3>Manutenção Preventiva</h3>
+
+          <ul>
+            <li>Troca de óleo lubrificante e filtros.</li>
+            <li>Teste de baterias e carregadores.</li>
+            <li>Verificação do sistema de arrefecimento.</li>
+            <li>Inspeção elétrica geral.</li>
+            <li>Ajustes de tensão e frequência.</li>
+            <li>Emissão de relatórios técnicos.</li>
+          </ul>
+
+          <h3>Manutenção Corretiva</h3>
+
+          <ul>
+            <li>Diagnóstico de falhas mecânicas e elétricas.</li>
+            <li>Reparo de motores diesel.</li>
+            <li>Reparo de alternadores.</li>
+            <li>Correção de falhas em QTA/ATS.</li>
+            <li>Atendimento emergencial 24 horas.</li>
+          </ul>
+
+          <h3>Operação de Grupos Geradores</h3>
+
+          <ul>
+            <li>Operação assistida de grupos geradores.</li>
+            <li>Monitoramento de parâmetros elétricos.</li>
+            <li>Controle de consumo de combustível.</li>
+            <li>Operação em paralelo e sincronismo.</li>
+            <li>Treinamento de operadores.</li>
+          </ul>
         </div>
       </section>
 
-      {/* REFRIGERAÇÃO */}
-      <section style={sectionStyle}>
-        <h2 style={titleStyle}>Refrigeração Industrial</h2>
+      {/* ================= REFRIGERAÇÃO ================= */}
+
+      <section style={cardStyle}>
+        <h2 style={subtitleStyle}>
+          Serviços em Refrigeração
+        </h2>
 
         <img
-          src="/images/painel.jpg"
+          src="/images/refrigeracao.png"
           alt="Refrigeração Industrial"
           style={imageStyle}
         />
 
         <div style={textStyle}>
-          <p>• Instalação de ar-condicionado industrial.</p>
-          <p>• Instalação de sistemas Split, VRF e Chiller.</p>
-          <p>• Instalação de câmaras frigoríficas.</p>
-          <p>• Instalação de painéis frigoríficos.</p>
-          <p>• Tubulações frigorígenas.</p>
-          <p>• Start-up e testes de funcionamento.</p>
-        </div>
+          <h3>Instalação de Sistemas</h3>
 
-        <h3 style={subtitleStyle}>Manutenção Corretiva</h3>
+          <ul>
+            <li>Instalação de ar-condicionado residencial e industrial.</li>
+            <li>Instalação de sistemas Split, VRF e Chiller.</li>
+            <li>Instalação de câmaras frigoríficas.</li>
+            <li>Instalação de painéis frigoríficos.</li>
+            <li>Carga de gás refrigerante.</li>
+            <li>Start-up e testes de funcionamento.</li>
+          </ul>
 
-        <div style={textStyle}>
-          <p>• Reparo de compressores.</p>
-          <p>• Correção de vazamentos de gás.</p>
-          <p>• Troca de motores e ventiladores.</p>
-          <p>• Recuperação de sistemas frigoríficos.</p>
-          <p>• Atendimento emergencial.</p>
+          <h3>Manutenção Preventiva</h3>
+
+          <ul>
+            <li>Limpeza de evaporadoras e condensadoras.</li>
+            <li>Higienização de sistemas de climatização.</li>
+            <li>Verificação de pressão do gás refrigerante.</li>
+            <li>Inspeção elétrica e mecânica.</li>
+            <li>Ajustes de temperatura e desempenho.</li>
+          </ul>
+
+          <h3>Manutenção Corretiva</h3>
+
+          <ul>
+            <li>Reparo de compressores.</li>
+            <li>Correção de vazamentos de gás.</li>
+            <li>Troca de motores e ventiladores.</li>
+            <li>Reparo de placas eletrônicas.</li>
+            <li>Atendimento emergencial.</li>
+          </ul>
         </div>
       </section>
 
-      {/* AUTOMAÇÃO */}
-      <section style={sectionStyle}>
-        <h2 style={titleStyle}>Automação Industrial</h2>
+      {/* ================= AUTOMAÇÃO ================= */}
+
+      <section style={cardStyle}>
+        <h2 style={subtitleStyle}>
+          Serviços em Automação Industrial
+        </h2>
 
         <img
-          src="/images/gerador2.jpg"
-          alt="Automação"
+          src="/images/qta.png"
+          alt="Automação Industrial"
           style={imageStyle}
         />
 
         <div style={textStyle}>
-          <p>• Desenvolvimento de projetos de automação.</p>
-          <p>• Instalação de painéis elétricos e comandos.</p>
-          <p>• Programação de CLP.</p>
-          <p>• Programação de IHMs.</p>
-          <p>• Sistemas supervisórios SCADA.</p>
-          <p>• Automação de grupos geradores.</p>
-          <p>• Instalação de sensores e instrumentos.</p>
-          <p>• Sistemas de telemetria.</p>
+          <h3>Automação Industrial</h3>
+
+          <ul>
+            <li>Desenvolvimento de projetos de automação.</li>
+            <li>Instalação de painéis elétricos e comandos.</li>
+            <li>Programação de CLP.</li>
+            <li>Programação de IHMs.</li>
+            <li>Integração de sistemas industriais.</li>
+            <li>Sistemas supervisórios SCADA.</li>
+            <li>Automação de grupos geradores.</li>
+          </ul>
+
+          <h3>Sistemas Elétricos e Controle</h3>
+
+          <ul>
+            <li>Montagem de quadros elétricos.</li>
+            <li>Instalação de inversores de frequência.</li>
+            <li>Parametrização de soft starters.</li>
+            <li>Controle de motores elétricos.</li>
+            <li>Sistemas de telemetria.</li>
+            <li>Monitoramento remoto de equipamentos.</li>
+          </ul>
+
+          <h3>Manutenção em Automação</h3>
+
+          <ul>
+            <li>Diagnóstico de falhas em sistemas automatizados.</li>
+            <li>Atualização de software e firmware.</li>
+            <li>Correção de falhas em CLPs e IHMs.</li>
+            <li>Backup e restauração de programas.</li>
+            <li>Calibração de sensores e instrumentos.</li>
+          </ul>
         </div>
       </section>
 
-      {/* DIFERENCIAIS */}
-      <section style={sectionStyle}>
-        <h2 style={titleStyle}>Diferenciais SUPPORT</h2>
+      {/* ================= DIFERENCIAIS ================= */}
+
+      <section style={cardStyle}>
+        <h2 style={subtitleStyle}>
+          Diferenciais da SUPPORT
+        </h2>
+
+        <img
+          src="/images/gerador1.png"
+          alt="Support Energia"
+          style={imageStyle}
+        />
 
         <div style={textStyle}>
-          <p>• Equipe técnica especializada.</p>
-          <p>• Atendimento emergencial 24 horas.</p>
-          <p>• Serviços com qualidade e segurança.</p>
-          <p>• Equipamentos modernos e tecnologia avançada.</p>
-          <p>• Atendimento industrial, comercial e residencial.</p>
-          <p>• Contratos de manutenção preventiva.</p>
-          <p>• Emissão de laudos e relatórios técnicos.</p>
-          <p>• Soluções personalizadas para cada cliente.</p>
+          <ul>
+            <li>Equipe técnica especializada.</li>
+            <li>Atendimento emergencial 24 horas.</li>
+            <li>Serviços com qualidade e segurança.</li>
+            <li>Equipamentos modernos e tecnologia avançada.</li>
+            <li>Atendimento industrial, comercial e residencial.</li>
+            <li>Contratos de manutenção preventiva.</li>
+            <li>Emissão de laudos e relatórios técnicos.</li>
+            <li>Soluções personalizadas para cada cliente.</li>
+          </ul>
         </div>
       </section>
     </main>
