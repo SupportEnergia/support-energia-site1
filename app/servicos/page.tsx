@@ -1,304 +1,258 @@
 export default function Servicos() {
+  const sectionStyle = {
+    backgroundColor: "#0a0a0a",
+    padding: "80px 40px",
+    color: "#fff",
+    borderBottom: "2px solid #00e5ff",
+  };
+
+  const titleStyle = {
+    fontSize: "58px",
+    color: "#ffcc00",
+    textAlign: "center" as const,
+    marginBottom: "40px",
+    textShadow: "0 0 20px #ff9900",
+    fontWeight: "bold" as const,
+  };
+
+  const subtitleStyle = {
+    fontSize: "38px",
+    color: "#00e5ff",
+    marginTop: "50px",
+    marginBottom: "25px",
+    textShadow: "0 0 12px #00e5ff",
+  };
+
+  const textStyle = {
+    fontSize: "22px",
+    lineHeight: "40px",
+    color: "#f5f5f5",
+  };
+
+  const imageStyle = {
+    width: "100%",
+    borderRadius: "20px",
+    border: "3px solid #ffcc00",
+    marginTop: "30px",
+    marginBottom: "40px",
+    boxShadow: "0 0 30px rgba(255,204,0,0.5)",
+  };
+
   return (
     <main
       style={{
-        backgroundColor: "#050505",
-        color: "#fff",
+        backgroundColor: "#000",
         minHeight: "100vh",
         fontFamily: "Arial",
       }}
     >
-      {/* BANNER */}
+      {/* HERO */}
       <section
         style={{
-          height: "550px",
           backgroundImage:
-            "linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.80)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1800')",
+            "url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1800')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          padding: "160px 40px",
           textAlign: "center",
+          position: "relative",
         }}
       >
-        <div>
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundColor: "rgba(0,0,0,0.75)",
+          }}
+        />
+
+        <div style={{ position: "relative", zIndex: 2 }}>
+          <img
+            src="/logo.png"
+            alt="SUPPORT"
+            style={{
+              width: "260px",
+              marginBottom: "30px",
+            }}
+          />
+
           <h1
             style={{
-              fontSize: "95px",
-              color: "#ffb400",
-              fontFamily: "Rye",
-              textShadow: "0 0 30px #ff9900",
+              fontSize: "80px",
+              color: "#ffcc00",
+              textShadow: "0 0 25px #ff9900",
+              marginBottom: "20px",
             }}
           >
-            SERVIÇOS
+            Serviços Industriais
           </h1>
 
           <p
             style={{
-              fontSize: "34px",
-              color: "#00e1ff",
+              fontSize: "30px",
+              color: "#00e5ff",
               fontWeight: "bold",
-              marginTop: "20px",
             }}
           >
-            Grupo Gerador • Refrigeração • Automação
+            Energia • Automação • Refrigeração
           </p>
         </div>
       </section>
 
-      {/* CONTEÚDO */}
-      <section
-        style={{
-          maxWidth: "1500px",
-          margin: "0 auto",
-          padding: "100px 50px",
-        }}
-      >
-        {/* GRUPOS GERADORES */}
-        <div style={cardStyle}>
-          <h2 style={titleStyle}>
-            Serviços em Grupos Geradores
-          </h2>
+      {/* GRUPOS GERADORES */}
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>Grupos Geradores</h2>
 
-          <img
-            src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1800"
-            alt="Grupo Gerador Diesel"
-            style={imageStyle}
-          />
+        <img
+          src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1800"
+          alt="Grupo Gerador Diesel"
+          style={imageStyle}
+        />
 
-          <p style={textStyle}>
-            Especialistas em instalação, manutenção preventiva,
-            manutenção corretiva e operação de grupos geradores
-            diesel e gás para sistemas industriais, comerciais
-            e usinas de geração de energia.
-          </p>
+        <h3 style={subtitleStyle}>Instalação</h3>
 
-          <h3 style={subTitle}>Instalação</h3>
-
-          <ul style={listStyle}>
-            <li>Instalação de grupos geradores diesel e gás.</li>
-            <li>Montagem de bases e estruturas metálicas.</li>
-            <li>Instalação de tanques de combustível.</li>
-            <li>Interligação elétrica de potência e comando.</li>
-            <li>Instalação de quadros QTA/ATS.</li>
-            <li>Instalação de aterramento elétrico.</li>
-            <li>Instalação de sistemas de exaustão.</li>
-            <li>Parametrização de controladores.</li>
-            <li>Start-up e comissionamento.</li>
-            <li>Testes operacionais com carga.</li>
-          </ul>
-
-          <h3 style={subTitle}>Manutenção Preventiva</h3>
-
-          <ul style={listStyle}>
-            <li>Troca de óleo lubrificante e filtros.</li>
-            <li>Troca de filtros de combustível e ar.</li>
-            <li>Inspeção de correias e mangueiras.</li>
-            <li>Verificação do sistema de arrefecimento.</li>
-            <li>Teste de baterias e carregadores.</li>
-            <li>Inspeção elétrica geral.</li>
-            <li>Ajustes de tensão e frequência.</li>
-            <li>Testes automáticos.</li>
-            <li>Relatórios técnicos.</li>
-          </ul>
-
-          <h3 style={subTitle}>Manutenção Corretiva</h3>
-
-          <ul style={listStyle}>
-            <li>Diagnóstico de falhas mecânicas e elétricas.</li>
-            <li>Reparo de motores diesel.</li>
-            <li>Reparo de alternadores.</li>
-            <li>Substituição de módulos eletrônicos.</li>
-            <li>Correção de falhas em ATS/QTA.</li>
-            <li>Recuperação de chicotes elétricos.</li>
-            <li>Atendimento emergencial 24 horas.</li>
-          </ul>
-
-          <h3 style={subTitle}>Operação</h3>
-
-          <ul style={listStyle}>
-            <li>Operação assistida.</li>
-            <li>Supervisão técnica.</li>
-            <li>Monitoramento de parâmetros elétricos.</li>
-            <li>Controle de combustível.</li>
-            <li>Operação em paralelo e sincronismo.</li>
-            <li>Treinamento de operadores.</li>
-          </ul>
+        <div style={textStyle}>
+          <p>• Instalação de grupos geradores diesel e gás.</p>
+          <p>• Montagem de bases e estruturas metálicas.</p>
+          <p>• Instalação de tanques de combustível.</p>
+          <p>• Interligação elétrica de potência e comando.</p>
+          <p>• Instalação de QTA/ATS.</p>
+          <p>• Sistemas de aterramento e proteção elétrica.</p>
+          <p>• Sistemas de exaustão e silenciamento.</p>
+          <p>• Parametrização de controladores.</p>
+          <p>• Start-up e comissionamento.</p>
+          <p>• Testes operacionais com carga e sem carga.</p>
         </div>
 
-        {/* REFRIGERAÇÃO */}
-        <div style={cardStyle}>
-          <h2 style={titleStyle}>
-            Serviços em Refrigeração
-          </h2>
+        <h3 style={subtitleStyle}>Manutenção Preventiva</h3>
 
-          <img
-            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1800"
-            alt="Refrigeração Industrial"
-            style={imageStyle}
-          />
-
-          <p style={textStyle}>
-            Soluções completas em climatização residencial,
-            comercial e industrial.
-          </p>
-
-          <h3 style={subTitle}>Instalação</h3>
-
-          <ul style={listStyle}>
-            <li>Instalação de ar-condicionado.</li>
-            <li>Sistemas Split, VRF e Chiller.</li>
-            <li>Câmaras frigoríficas.</li>
-            <li>Painéis frigoríficos.</li>
-            <li>Tubulações frigorígenas.</li>
-            <li>Carga de gás refrigerante.</li>
-          </ul>
-
-          <h3 style={subTitle}>Manutenção Preventiva</h3>
-
-          <ul style={listStyle}>
-            <li>Limpeza de evaporadoras.</li>
-            <li>Higienização de climatização.</li>
-            <li>Verificação de pressão.</li>
-            <li>Limpeza de filtros.</li>
-            <li>Inspeção elétrica e mecânica.</li>
-          </ul>
-
-          <h3 style={subTitle}>Manutenção Corretiva</h3>
-
-          <ul style={listStyle}>
-            <li>Reparo de compressores.</li>
-            <li>Correção de vazamentos.</li>
-            <li>Troca de motores.</li>
-            <li>Reparo eletrônico.</li>
-            <li>Atendimento emergencial.</li>
-          </ul>
+        <div style={textStyle}>
+          <p>• Troca de óleo e filtros.</p>
+          <p>• Verificação do sistema de arrefecimento.</p>
+          <p>• Teste de baterias e carregadores.</p>
+          <p>• Ajustes de tensão e frequência.</p>
+          <p>• Inspeção elétrica geral.</p>
+          <p>• Relatórios técnicos completos.</p>
         </div>
 
-        {/* AUTOMAÇÃO */}
-        <div style={cardStyle}>
-          <h2 style={titleStyle}>
-            Serviços em Automação
-          </h2>
+        <h3 style={subtitleStyle}>Manutenção Corretiva</h3>
 
-          <img
-            src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=1800"
-            alt="Automação Industrial"
-            style={imageStyle}
-          />
-
-          <p style={textStyle}>
-            Desenvolvimento de soluções completas em automação
-            industrial e integração de sistemas elétricos.
-          </p>
-
-          <h3 style={subTitle}>Automação Industrial</h3>
-
-          <ul style={listStyle}>
-            <li>Projetos de automação.</li>
-            <li>Instalação de painéis elétricos.</li>
-            <li>Programação de CLP.</li>
-            <li>Programação de IHM.</li>
-            <li>Integração de sistemas industriais.</li>
-            <li>Sistemas supervisórios SCADA.</li>
-            <li>Automação de grupos geradores.</li>
-          </ul>
-
-          <h3 style={subTitle}>Sistemas Elétricos</h3>
-
-          <ul style={listStyle}>
-            <li>Montagem de quadros elétricos.</li>
-            <li>Instalação de inversores.</li>
-            <li>Soft starters.</li>
-            <li>Controle de motores.</li>
-            <li>Proteção elétrica.</li>
-            <li>Monitoramento remoto.</li>
-            <li>Sistemas de telemetria.</li>
-          </ul>
-
-          <h3 style={subTitle}>Manutenção</h3>
-
-          <ul style={listStyle}>
-            <li>Diagnóstico de falhas.</li>
-            <li>Atualização de software.</li>
-            <li>Correção em CLPs e IHMs.</li>
-            <li>Backup de programas.</li>
-            <li>Manutenção de painéis.</li>
-            <li>Calibração de sensores.</li>
-          </ul>
+        <div style={textStyle}>
+          <p>• Diagnóstico de falhas mecânicas e elétricas.</p>
+          <p>• Reparo de motores diesel.</p>
+          <p>• Reparo de alternadores.</p>
+          <p>• Recuperação de chicotes elétricos.</p>
+          <p>• Atendimento emergencial 24h.</p>
         </div>
 
-        {/* DIFERENCIAIS */}
-        <div style={cardStyle}>
-          <h2 style={titleStyle}>
-            Diferenciais da SUPPORT
-          </h2>
+        <img
+          src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1800"
+          alt="Manutenção Industrial"
+          style={imageStyle}
+        />
+      </section>
 
-          <img
-            src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1800"
-            alt="Usina Híbrida"
-            style={imageStyle}
-          />
+      {/* REFRIGERAÇÃO */}
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>Refrigeração Industrial</h2>
 
-          <ul style={listStyle}>
-            <li>Equipe técnica especializada.</li>
-            <li>Atendimento emergencial 24 horas.</li>
-            <li>Serviços com qualidade e segurança.</li>
-            <li>Tecnologia avançada.</li>
-            <li>Atendimento industrial, comercial e residencial.</li>
-            <li>Contratos de manutenção preventiva.</li>
-            <li>Emissão de laudos técnicos.</li>
-            <li>Soluções personalizadas.</li>
-          </ul>
+        <img
+          src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1800"
+          alt="Refrigeração Industrial"
+          style={imageStyle}
+        />
+
+        <h3 style={subtitleStyle}>Instalação</h3>
+
+        <div style={textStyle}>
+          <p>• Instalação de ar-condicionado industrial.</p>
+          <p>• Sistemas Split, VRF e Chiller.</p>
+          <p>• Câmaras frigoríficas.</p>
+          <p>• Painéis frigoríficos.</p>
+          <p>• Tubulações frigorígenas.</p>
+          <p>• Start-up e testes de funcionamento.</p>
+        </div>
+
+        <h3 style={subtitleStyle}>Manutenção Preventiva</h3>
+
+        <div style={textStyle}>
+          <p>• Limpeza de evaporadoras e condensadoras.</p>
+          <p>• Higienização completa.</p>
+          <p>• Verificação de pressão do gás.</p>
+          <p>• Ajustes de temperatura.</p>
+          <p>• Inspeção elétrica e mecânica.</p>
+        </div>
+
+        <h3 style={subtitleStyle}>Manutenção Corretiva</h3>
+
+        <div style={textStyle}>
+          <p>• Reparo de compressores.</p>
+          <p>• Correção de vazamentos.</p>
+          <p>• Troca de motores e ventiladores.</p>
+          <p>• Recuperação de sistemas frigoríficos.</p>
+          <p>• Atendimento emergencial.</p>
+        </div>
+      </section>
+
+      {/* AUTOMAÇÃO */}
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>Automação Industrial</h2>
+
+        <img
+          src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1800"
+          alt="Automação Industrial"
+          style={imageStyle}
+        />
+
+        <h3 style={subtitleStyle}>Automação</h3>
+
+        <div style={textStyle}>
+          <p>• Desenvolvimento de projetos industriais.</p>
+          <p>• Programação de CLP.</p>
+          <p>• Programação de IHMs.</p>
+          <p>• Sistemas supervisórios SCADA.</p>
+          <p>• Integração de sistemas industriais.</p>
+          <p>• Automação de grupos geradores.</p>
+        </div>
+
+        <h3 style={subtitleStyle}>Sistemas Elétricos</h3>
+
+        <div style={textStyle}>
+          <p>• Montagem de quadros elétricos.</p>
+          <p>• Instalação de inversores de frequência.</p>
+          <p>• Parametrização de soft starters.</p>
+          <p>• Controle de motores elétricos.</p>
+          <p>• Monitoramento remoto.</p>
+          <p>• Sistemas de telemetria.</p>
+        </div>
+
+        <h3 style={subtitleStyle}>Manutenção</h3>
+
+        <div style={textStyle}>
+          <p>• Diagnóstico de falhas automatizadas.</p>
+          <p>• Atualização de software e firmware.</p>
+          <p>• Correção de falhas em CLPs.</p>
+          <p>• Backup e restauração de programas.</p>
+          <p>• Calibração de sensores.</p>
+        </div>
+      </section>
+
+      {/* DIFERENCIAIS */}
+      <section style={sectionStyle}>
+        <h2 style={titleStyle}>Diferenciais SUPPORT</h2>
+
+        <div style={textStyle}>
+          <p>• Equipe técnica especializada.</p>
+          <p>• Atendimento emergencial 24 horas.</p>
+          <p>• Serviços com qualidade e segurança.</p>
+          <p>• Equipamentos modernos.</p>
+          <p>• Tecnologia avançada.</p>
+          <p>• Atendimento industrial, comercial e residencial.</p>
+          <p>• Contratos de manutenção preventiva.</p>
+          <p>• Emissão de laudos técnicos.</p>
+          <p>• Soluções personalizadas.</p>
         </div>
       </section>
     </main>
   );
 }
-
-const cardStyle = {
-  backgroundColor: "#0d0d0d",
-  padding: "50px",
-  borderRadius: "25px",
-  marginBottom: "70px",
-  border: "2px solid #00e1ff",
-  boxShadow: "0 0 25px rgba(0,225,255,0.2)",
-};
-
-const titleStyle = {
-  fontSize: "60px",
-  color: "#ffb400",
-  marginBottom: "30px",
-  fontFamily: "Rye",
-};
-
-const subTitle = {
-  fontSize: "38px",
-  color: "#00e1ff",
-  marginTop: "50px",
-  marginBottom: "20px",
-};
-
-const textStyle = {
-  fontSize: "25px",
-  lineHeight: "45px",
-  color: "#d8d8d8",
-  marginBottom: "30px",
-};
-
-const listStyle = {
-  fontSize: "24px",
-  lineHeight: "45px",
-  color: "#d8d8d8",
-};
-
-const imageStyle = {
-  width: "100%",
-  height: "500px",
-  objectFit: "cover" as const,
-  borderRadius: "20px",
-  marginBottom: "40px",
-  border: "3px solid #ffb400",
-  boxShadow: "0 0 25px rgba(255,180,0,0.4)",
-};
