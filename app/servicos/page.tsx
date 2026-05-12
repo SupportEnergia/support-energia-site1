@@ -1,237 +1,170 @@
+import Image from "next/image";
+
 export default function Servicos() {
-  const sectionStyle = {
-    backgroundColor: "#050505",
-    color: "#fff",
-    padding: "80px 40px",
-    fontFamily: "Arial",
-  };
-
-  const titleStyle = {
-    fontSize: "65px",
-    color: "#ffcc00",
-    textAlign: "center" as const,
-    marginBottom: "30px",
-    textShadow: "0 0 25px #ff9900",
-    fontWeight: "bold" as const,
-  };
-
-  const cardStyle = {
-    backgroundColor: "#101010",
-    border: "2px solid #00e5ff",
-    borderRadius: "20px",
-    padding: "30px",
-    marginBottom: "50px",
-    boxShadow: "0 0 25px rgba(0,229,255,0.5)",
-  };
-
-  const subtitleStyle = {
-    fontSize: "40px",
-    color: "#00e5ff",
-    marginBottom: "20px",
-    textShadow: "0 0 15px #00e5ff",
-  };
-
-  const textStyle = {
-    fontSize: "22px",
-    lineHeight: "2",
-  };
-
-  const imageStyle = {
-    width: "100%",
-    maxWidth: "900px",
-    borderRadius: "20px",
-    marginTop: "30px",
-    marginBottom: "30px",
-    border: "3px solid #ffcc00",
-    boxShadow: "0 0 25px rgba(255,204,0,0.7)",
-  };
-
   return (
-    <main style={sectionStyle}>
-      <h1 style={titleStyle}>SERVIÇOS SUPPORT</h1>
+    <main className="bg-black text-white min-h-screen">
 
-      {/* ================= GERADORES ================= */}
-
-      <section style={cardStyle}>
-        <h2 style={subtitleStyle}>
-          Serviços em Grupos Geradores
-        </h2>
-
-        <img
-          src="/images/gerador2.png"
-          alt="Grupo Gerador"
-          style={imageStyle}
+      {/* HERO */}
+      <section className="relative h-[500px] flex items-center justify-center">
+        <Image
+          src="/images/principal.jpeg"
+          alt="Serviços Support"
+          fill
+          className="object-cover opacity-40"
         />
 
-        <div style={textStyle}>
-          <h3>Instalação de Grupos Geradores</h3>
+        <div className="relative z-10 text-center px-6">
+          <h1 className="text-6xl font-bold text-yellow-400 drop-shadow-[0_0_20px_gold]">
+            SERVIÇOS
+          </h1>
 
-          <ul>
-            <li>Instalação de grupos geradores diesel e gás.</li>
-            <li>Montagem de bases, suportes e estruturas metálicas.</li>
-            <li>Instalação de tanques de combustível.</li>
-            <li>Interligação elétrica de potência e comando.</li>
-            <li>Instalação de QTA / ATS.</li>
-            <li>Parametrização de controladores eletrônicos.</li>
-            <li>Start-up e comissionamento completo.</li>
-            <li>Testes operacionais com carga e sem carga.</li>
-          </ul>
-
-          <h3>Manutenção Preventiva</h3>
-
-          <ul>
-            <li>Troca de óleo lubrificante e filtros.</li>
-            <li>Teste de baterias e carregadores.</li>
-            <li>Verificação do sistema de arrefecimento.</li>
-            <li>Inspeção elétrica geral.</li>
-            <li>Ajustes de tensão e frequência.</li>
-            <li>Emissão de relatórios técnicos.</li>
-          </ul>
-
-          <h3>Manutenção Corretiva</h3>
-
-          <ul>
-            <li>Diagnóstico de falhas mecânicas e elétricas.</li>
-            <li>Reparo de motores diesel.</li>
-            <li>Reparo de alternadores.</li>
-            <li>Correção de falhas em QTA/ATS.</li>
-            <li>Atendimento emergencial 24 horas.</li>
-          </ul>
-
-          <h3>Operação de Grupos Geradores</h3>
-
-          <ul>
-            <li>Operação assistida de grupos geradores.</li>
-            <li>Monitoramento de parâmetros elétricos.</li>
-            <li>Controle de consumo de combustível.</li>
-            <li>Operação em paralelo e sincronismo.</li>
-            <li>Treinamento de operadores.</li>
-          </ul>
+          <p className="mt-6 text-2xl text-cyan-300">
+            Energia • Automação • Refrigeração
+          </p>
         </div>
       </section>
 
-      {/* ================= REFRIGERAÇÃO ================= */}
+      {/* GRUPOS GERADORES */}
+      <section className="max-w-7xl mx-auto py-20 px-6 grid md:grid-cols-2 gap-12 items-center">
 
-      <section style={cardStyle}>
-        <h2 style={subtitleStyle}>
-          Serviços em Refrigeração
-        </h2>
+        <div>
+          <h2 className="text-5xl font-bold text-yellow-400 mb-6">
+            Grupo Gerador
+          </h2>
 
-        <img
-          src="/images/refrigeracao.png"
-          alt="Refrigeração Industrial"
-          style={imageStyle}
-        />
+          <p className="text-lg leading-8 text-gray-300">
+            Instalação, manutenção preventiva, corretiva,
+            operação assistida e automação de grupos geradores
+            diesel e gás.
+          </p>
 
-        <div style={textStyle}>
-          <h3>Instalação de Sistemas</h3>
-
-          <ul>
-            <li>Instalação de ar-condicionado residencial e industrial.</li>
-            <li>Instalação de sistemas Split, VRF e Chiller.</li>
-            <li>Instalação de câmaras frigoríficas.</li>
-            <li>Instalação de painéis frigoríficos.</li>
-            <li>Carga de gás refrigerante.</li>
-            <li>Start-up e testes de funcionamento.</li>
+          <ul className="mt-8 space-y-3 text-gray-300">
+            <li>✔ Instalação de QTA/ATS</li>
+            <li>✔ Parametrização de controladores</li>
+            <li>✔ Operação em paralelo</li>
+            <li>✔ Start-up e comissionamento</li>
+            <li>✔ Atendimento emergencial 24h</li>
           </ul>
+        </div>
 
-          <h3>Manutenção Preventiva</h3>
-
-          <ul>
-            <li>Limpeza de evaporadoras e condensadoras.</li>
-            <li>Higienização de sistemas de climatização.</li>
-            <li>Verificação de pressão do gás refrigerante.</li>
-            <li>Inspeção elétrica e mecânica.</li>
-            <li>Ajustes de temperatura e desempenho.</li>
-          </ul>
-
-          <h3>Manutenção Corretiva</h3>
-
-          <ul>
-            <li>Reparo de compressores.</li>
-            <li>Correção de vazamentos de gás.</li>
-            <li>Troca de motores e ventiladores.</li>
-            <li>Reparo de placas eletrônicas.</li>
-            <li>Atendimento emergencial.</li>
-          </ul>
+        <div className="rounded-3xl overflow-hidden border-4 border-yellow-400 shadow-[0_0_30px_gold]">
+          <Image
+            src="/images/motor.jpeg"
+            alt="Grupo Gerador"
+            width={700}
+            height={500}
+            className="w-full h-full object-cover"
+          />
         </div>
       </section>
 
-      {/* ================= AUTOMAÇÃO ================= */}
+      {/* REFRIGERAÇÃO */}
+      <section className="bg-zinc-950 py-20">
 
-      <section style={cardStyle}>
-        <h2 style={subtitleStyle}>
-          Serviços em Automação Industrial
-        </h2>
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-        <img
-          src="/images/qta.png"
-          alt="Automação Industrial"
-          style={imageStyle}
-        />
+          <div className="rounded-3xl overflow-hidden border-4 border-cyan-400 shadow-[0_0_30px_cyan]">
+            <Image
+              src="/images/servicos.jpeg"
+              alt="Refrigeração"
+              width={700}
+              height={500}
+              className="w-full h-full object-cover"
+            />
+          </div>
 
-        <div style={textStyle}>
-          <h3>Automação Industrial</h3>
+          <div>
+            <h2 className="text-5xl font-bold text-cyan-400 mb-6">
+              Refrigeração
+            </h2>
 
-          <ul>
-            <li>Desenvolvimento de projetos de automação.</li>
-            <li>Instalação de painéis elétricos e comandos.</li>
-            <li>Programação de CLP.</li>
-            <li>Programação de IHMs.</li>
-            <li>Integração de sistemas industriais.</li>
-            <li>Sistemas supervisórios SCADA.</li>
-            <li>Automação de grupos geradores.</li>
-          </ul>
+            <p className="text-lg leading-8 text-gray-300">
+              Instalação e manutenção de sistemas de climatização
+              residencial, comercial e industrial.
+            </p>
 
-          <h3>Sistemas Elétricos e Controle</h3>
+            <ul className="mt-8 space-y-3 text-gray-300">
+              <li>✔ Sistemas Split e VRF</li>
+              <li>✔ Câmaras frigoríficas</li>
+              <li>✔ Chiller industrial</li>
+              <li>✔ Higienização completa</li>
+              <li>✔ Correção de vazamentos</li>
+            </ul>
+          </div>
 
-          <ul>
-            <li>Montagem de quadros elétricos.</li>
-            <li>Instalação de inversores de frequência.</li>
-            <li>Parametrização de soft starters.</li>
-            <li>Controle de motores elétricos.</li>
-            <li>Sistemas de telemetria.</li>
-            <li>Monitoramento remoto de equipamentos.</li>
-          </ul>
-
-          <h3>Manutenção em Automação</h3>
-
-          <ul>
-            <li>Diagnóstico de falhas em sistemas automatizados.</li>
-            <li>Atualização de software e firmware.</li>
-            <li>Correção de falhas em CLPs e IHMs.</li>
-            <li>Backup e restauração de programas.</li>
-            <li>Calibração de sensores e instrumentos.</li>
-          </ul>
         </div>
       </section>
 
-      {/* ================= DIFERENCIAIS ================= */}
+      {/* AUTOMAÇÃO */}
+      <section className="max-w-7xl mx-auto py-20 px-6 grid md:grid-cols-2 gap-12 items-center">
 
-      <section style={cardStyle}>
-        <h2 style={subtitleStyle}>
-          Diferenciais da SUPPORT
-        </h2>
+        <div>
+          <h2 className="text-5xl font-bold text-green-400 mb-6">
+            Automação Industrial
+          </h2>
 
-        <img
-          src="/images/gerador1.png"
-          alt="Support Energia"
-          style={imageStyle}
-        />
+          <p className="text-lg leading-8 text-gray-300">
+            Soluções modernas em automação industrial,
+            sistemas elétricos, telemetria e supervisão.
+          </p>
 
-        <div style={textStyle}>
-          <ul>
-            <li>Equipe técnica especializada.</li>
-            <li>Atendimento emergencial 24 horas.</li>
-            <li>Serviços com qualidade e segurança.</li>
-            <li>Equipamentos modernos e tecnologia avançada.</li>
-            <li>Atendimento industrial, comercial e residencial.</li>
-            <li>Contratos de manutenção preventiva.</li>
-            <li>Emissão de laudos e relatórios técnicos.</li>
-            <li>Soluções personalizadas para cada cliente.</li>
+          <ul className="mt-8 space-y-3 text-gray-300">
+            <li>✔ Programação CLP</li>
+            <li>✔ Sistemas supervisórios SCADA</li>
+            <li>✔ Monitoramento remoto</li>
+            <li>✔ Inversores de frequência</li>
+            <li>✔ Integração industrial</li>
           </ul>
         </div>
+
+        <div className="rounded-3xl overflow-hidden border-4 border-green-400 shadow-[0_0_30px_lime]">
+          <Image
+            src="/images/automacaojpeg.jpeg"
+            alt="Automação"
+            width={700}
+            height={500}
+            className="w-full h-full object-cover"
+          />
+        </div>
       </section>
+
+      {/* BESS */}
+      <section className="bg-zinc-950 py-20">
+
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+          <div className="rounded-3xl overflow-hidden border-4 border-purple-400 shadow-[0_0_30px_purple]">
+            <Image
+              src="/images/bess.jpeg"
+              alt="BESS"
+              width={700}
+              height={500}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div>
+            <h2 className="text-5xl font-bold text-purple-400 mb-6">
+              Sistemas BESS
+            </h2>
+
+            <p className="text-lg leading-8 text-gray-300">
+              Soluções em armazenamento de energia,
+              sistemas híbridos e integração com energia solar.
+            </p>
+
+            <ul className="mt-8 space-y-3 text-gray-300">
+              <li>✔ Banco de baterias</li>
+              <li>✔ Sistemas híbridos</li>
+              <li>✔ Eficiência energética</li>
+              <li>✔ Energia solar</li>
+              <li>✔ Monitoramento inteligente</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
     </main>
   );
 }
